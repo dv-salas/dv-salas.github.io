@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>2. CNC - Dario Salas - Taller Fabricación 2021</title>
+  <title>2. Mecanizado CNC - Dario Salas - Taller Fabricación 2021</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://dv-salas.github.io/favicon.png">
@@ -107,11 +107,19 @@
     </li>
     
     <li class="active ">
-      <a href="https://dv-salas.github.io/docs/post2-cnc/">2. CNC</a>
+      <a href="https://dv-salas.github.io/docs/post2-cnc/">2. Mecanizado CNC</a>
     </li>
     
     <li class="">
       <a href="https://dv-salas.github.io/docs/post3-cncgrupal/">3. CNC Grupo 7</a>
+    </li>
+    
+    <li class="">
+      <a href="https://dv-salas.github.io/docs/post4-cnc-2.5/">4. Mecanizado CNC 2.5</a>
+    </li>
+    
+    <li class="">
+      <a href="https://dv-salas.github.io/docs/nn2/">4. nn</a>
     </li>
     
     <li class="">
@@ -125,7 +133,7 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">2. CNC</h1>
+<h1 class="title">2. Mecanizado CNC</h1>
 <div class="content ">
   <h2 id="tipos-de-fresadoras">Tipos de fresadoras</h2>
 <hr>
@@ -329,85 +337,82 @@ Entre sus ventajas se encuentra la gran precisión que posee y el bajo coste par
 </ol>
 <p><img src="/img/pasoscnc/2.png" alt="Proyecciones silla"></p>
 <ol start="3">
-<li></li>
+<li>Aplicamos una extrucción (extrude) de 15mm a nuestro plano, para asi modelar la tabla de madera que usaríamos para producir nuestras piezas mediante CNC.</li>
 </ol>
 <p><img src="/img/pasoscnc/3.png" alt="Proyecciones silla"></p>
 <ol start="4">
-<li></li>
+<li>Ya teniendo nuestra tabla hecha debemos posicionar las piezas que queremos cortar en ella, para que la misma no estorbe en este proceso, escondan la pestaña en que se encuentra. Entonces primero debemos copiar las diferentes piezas de nuestra silla, para esto utilizamos la herramienta move y dejamos marcada la casilla que mueve una copia de la pieza seleccionada (&ldquo;copy&rdquo; en la ventana se abre al aplicar el move).</li>
 </ol>
 <p><img src="/img/pasoscnc/4.png" alt="Proyecciones silla"></p>
 <ol start="5">
-<li></li>
+<li>Luego de copiar y mover nuestra pieza, debemos alinearla con nuestra mesa de trabajo, para esto en &ldquo;modificar&rdquo; utilizamos la herramienta de alinear (align), donde nos pedirá seleccionar la cara del objeto que queremos alinear y luego seleccionar a que otra cara queremos que de alinie, que en este caso seria el plano xy.
+Se debe revisar que la cara que quede hacia arriba sea la que tiene ranuras mientras abajo debe quedar la cara plana (la maquina de CNC corta de arriba hacia abajo), en el caso de que se alinie al revés, en la ventana de alineado hay una opción para cambiar el sentido en que se alineó.</li>
 </ol>
 <p><img src="/img/pasoscnc/5.png" alt="Proyecciones silla"></p>
 <ol start="6">
-<li></li>
+<li>Debemos hacer esto con todas las piezas de la silla, y preocuparse de que queden emplazadas dentro del espacio donde tenemos nuestro plano, ya que esa será la madera que se cortará para hacer las piezas.</li>
 </ol>
 <p><img src="/img/pasoscnc/6.png" alt="Proyecciones silla"></p>
 <ol start="7">
-<li></li>
+<li>Pueden ir prendiendo o apagando la pestaña del plano para revisar que vaya quedando todo en su lugar.</li>
 </ol>
 <p><img src="/img/pasoscnc/7.png" alt="Proyecciones silla"></p>
 <h3 id="segunda-parte">Segunda parte</h3>
+<p>Proceso para la manufacturación</p>
+<h1 id="heading-6"></h1>
 <ol start="8">
-<li></li>
+<li>Cambiamos del modo &ldquo;diseño&rdquo; al de &ldquo;manufactura&rdquo; (design-manufacture)</li>
 </ol>
 <p><img src="/img/pasoscnc/8.jpeg" alt="Proyecciones silla"></p>
 <ol start="9">
-<li></li>
+<li>ya cambiado, vamos a la carpeta marcada en azul en la parte superior izquierda de la imagen, el setup, seleccionando la máquina que utilizaremos (“Autodesk generic 3-axis”)</li>
 </ol>
 <p><img src="/img/pasoscnc/9.jpeg" alt="Proyecciones silla"></p>
 <ol start="10">
-<li></li>
+<li>Luego vamos a “stock” y cambiamos el “mode” a “from solid” y seleccionamos la plancha de terciado.</li>
 </ol>
 <p><img src="/img/pasoscnc/10.jpeg" alt="Proyecciones silla"></p>
 <ol start="11">
-<li></li>
+<li>Después, donde escogimos la máquina de trabajo, nos dirigimos abajo a “model” y seleccionamos las piezas que queremos trabajar, esto serían las dos patas posteriores para el ejemplo, en general debemos hacer este proceso para todas las piezas de lo que queramos construir.</li>
 </ol>
 <p><img src="/img/pasoscnc/11.jpeg" alt="Proyecciones silla"></p>
 <ol start="12">
-<li></li>
+<li>En la misma área vams a “work coordinate system” y cambiamos la orientación, apretamos “select z axis/plane &amp; x axis”, una vez hecho esto debemos seleccionar la parte superior de la plancha para que el eje z quede vertical al plano xy. Después apretamos el borde de la plancha que se encuentra detrás de la silla en la imagen para establecer la posición del eje x en este lugar y escogemos el punto (0,0,0) como referencia para la máquina.</li>
 </ol>
 <p><img src="/img/pasoscnc/12.jpeg" alt="Proyecciones silla"></p>
-<ol start="13">
-<li></li>
-</ol>
 <p><img src="/img/pasoscnc/13.jpeg" alt="Proyecciones silla"></p>
-<ol start="14">
-<li></li>
+<ol start="13">
+<li>Dadas la bases comenzamos con los comandos más específicos, con 2d contour, para generar las ranuras que anteriormente habiamos dejado mirando hacia arriba, para esto, debemos seleccionar los vectores inferiores de cada ranura.</li>
 </ol>
 <p><img src="/img/pasoscnc/14.jpeg" alt="Proyecciones silla"></p>
-<ol start="15">
-<li></li>
-</ol>
 <p><img src="/img/pasoscnc/15.jpeg" alt="Proyecciones silla"></p>
-<ol start="16">
-<li></li>
+<ol start="14">
+<li>inmediatamente después, el programa nos pedirá la fresia para realizar estas ranuras, en este caso usaremos una fresia de un diámetro de 6mm, con un flute length de 20mm, un overall length de 63mm y flat end mill.</li>
 </ol>
 <p><img src="/img/pasoscnc/16.jpeg" alt="Proyecciones silla"></p>
-<ol start="17">
-<li></li>
+<ol start="15">
+<li>Luego debemos hacer unos pequeños ajustes, desde la carpeta que aparecen en la parte inferior izquierda de la pantalla, seleccionamos el 2d contour que hicimos con click derecho, nos dirigimos a “edit” e iremos a &ldquo;passes&rdquo;, luego &ldquo;multiple depths&rdquo; y apretaremos en la primera casilla “maximum roughing”, cambiandolo de 1mm a 3mm, hacer que ña fresia haga lso cortes en una pasada produce que esta se desgaste más rápido de lo qu deberia por lo tanto, lo mejor para cuidarlas es que estas lo hagan en varias pasadas, en este caso 5 por ranura.</li>
 </ol>
 <p><img src="/img/pasoscnc/17.jpeg" alt="Proyecciones silla"></p>
-<ol start="18">
-<li></li>
+<ol start="16">
+<li>Lo siguiente es un &ldquo;2d pocket&rdquo;, para esto seleccionaremos los sacados para generar las uniones mayores de las patas con los largueros, tal como se ve en la imagen.</li>
 </ol>
 <p><img src="/img/pasoscnc/18.jpeg" alt="Proyecciones silla"></p>
-<ol start="19">
-<li></li>
+<ol start="17">
+<li>Realizamos la operación &ldquo;2d contour&rdquo; nuevamente, seleccionando los vectores inferiores de cada pieza en su totalidad marcados con color azul en la imagen, lo cual vendría siendo el contorno de la pieza completa por fuera.</li>
 </ol>
 <p><img src="/img/pasoscnc/19.jpeg" alt="Proyecciones silla"></p>
-<ol start="20">
-<li></li>
+<ol start="18">
+<li>Vamos a edit en este nuevo 2d contour, para cambiar al igual que hicimos con las ranuras pequeñas, el &ldquo;multiple depths&rdquo;, cambiando el primer espacio de 1mm a 3mm, exactamente como se hizo antes, la imagen de abajo muestra las veces que pasara la CNC.</li>
 </ol>
 <p><img src="/img/pasoscnc/20.jpeg" alt="Proyecciones silla"></p>
-<ol start="21">
-<li></li>
+<ol start="19">
+<li>Por último debemos ir a edit en este último 2d contour, luego “geometry”, marcaremos la casilla de “tabs”, ajustaremos el “tab height” a 3mm y la “tab distance” a 350mm. Los tabs corresponden a pequeñas uniones que generamos como prepicado para que la pieza pueda cortarse de manera correcta sin moverse, debemos ajustar la distancia de los tabs para que no sean demasiados ni tan pocos. La imagen permite ver como la máquina deja ciertos espacios sin cortar que corresponden a los &ldquo;tabs&rdquo;.</li>
 </ol>
 <p><img src="/img/pasoscnc/21.jpeg" alt="Proyecciones silla"></p>
 <h2 id="pasos-asiento">Pasos asiento</h2>
 <hr>
-<h1 id="heading-6"></h1>
+<h1 id="heading-7"></h1>
 <ul>
 <li>
 <ol>
@@ -432,9 +437,9 @@ Entre sus ventajas se encuentra la gran precisión que posee y el bajo coste par
 </ul>
 <h2 id="planimetrías">Planimetrías</h2>
 <hr>
-<h1 id="heading-7"></h1>
-<p>Diferentes vistas y componentes de la silla</p>
 <h1 id="heading-8"></h1>
+<p>Diferentes vistas y componentes de la silla</p>
+<h1 id="heading-9"></h1>
 <h2 id="hahahugoshortcode-s4-hbhb-hahahugoshortcode-s5-hbhb">
 
 
@@ -512,7 +517,7 @@ Entre sus ventajas se encuentra la gran precisión que posee y el bajo coste par
 </h2>
 <h2 id="simulación-corte-3d">Simulación corte 3D</h2>
 <hr>
-<h1 id="heading-9"></h1>
+<h1 id="heading-10"></h1>
 <p>Simulación de cortes en planchas de madera de las diferentes piezas de la silla</p>
 <p><div>
     <video 
@@ -530,10 +535,10 @@ Entre sus ventajas se encuentra la gran precisión que posee y el bajo coste par
     <source src="/img/TutorialCNC2.mp4"  type="video/mp4">
     </video>
 </div></p>
-<h1 id="heading-10"></h1>
+<h1 id="heading-11"></h1>
 <h2 id="visualización-3d">Visualización 3D</h2>
 <hr>
-<h1 id="heading-11"></h1>
+<h1 id="heading-12"></h1>
 <h2 id="hahahugoshortcode-s8-hbhb"><div>
     <iframe 
     src='https://a360.co/3kaXxDL'
@@ -547,9 +552,9 @@ Entre sus ventajas se encuentra la gran precisión que posee y el bajo coste par
 </div></h2>
 <h2 id="galeria-fotos-reales-proceso">Galeria fotos reales proceso</h2>
 <hr>
-<h1 id="heading-12"></h1>
-<p>Galeria en orden de los diferentes pasos de cortado de piezas de la silla, además de su posterior ensamblaje, uniones, etc. Todo en fotos reales del proceso.</p>
 <h1 id="heading-13"></h1>
+<p>Galeria en orden de los diferentes pasos de cortado de piezas de la silla, además de su posterior ensamblaje, uniones, etc. Todo en fotos reales del proceso.</p>
+<h1 id="heading-14"></h1>
 <p>
 
 

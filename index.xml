@@ -44,7 +44,7 @@
     </item>
     
     <item>
-      <title>2. CNC</title>
+      <title>2. Mecanizado CNC</title>
       <link>https://dv-salas.github.io/docs/post2-cnc/</link>
       <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
       
@@ -58,6 +58,24 @@
       <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
       
       <guid>https://dv-salas.github.io/docs/post3-cncgrupal/</guid>
+      <description>Comentarios varios, apreciaciones y opiniones.</description>
+    </item>
+    
+    <item>
+      <title>4. Mecanizado CNC 2.5</title>
+      <link>https://dv-salas.github.io/docs/post4-cnc-2.5/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://dv-salas.github.io/docs/post4-cnc-2.5/</guid>
+      <description>Comentarios varios, apreciaciones y opiniones.</description>
+    </item>
+    
+    <item>
+      <title>4. nn</title>
+      <link>https://dv-salas.github.io/docs/nn2/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://dv-salas.github.io/docs/nn2/</guid>
       <description>Comentarios varios, apreciaciones y opiniones.</description>
     </item>
     
