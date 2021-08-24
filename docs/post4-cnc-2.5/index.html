@@ -146,15 +146,83 @@
   <h2 id="introducción">Introducción</h2>
 <hr>
 <h1 id="heading"></h1>
+<p>Dentro de los tipos de cortes, desbaste, cortorneados, etc, tenemos distintas formas de realizarlos, en primero lugar estan las máquinas de corte tipo 2D que cortan solo 1 una profundidad por trabajo, como por ejemplo las cortadoras laser, waterjets, etc, que realizan cortes o grabados.</p>
+<p><img src="/img/cnc252/waterjet.jpg" alt="Proyecciones silla"></p>
+<p>Luego tenemos las de 2.5D (que usaremos en esta sección), la cual se mueve en 3 ejes pero no simultáneamente, es decir el eje Z se fija para realizar acciones en los ejes X e Y, luego el eje Z vuelve a ajustarse para fijar y permitir nuevamente aciones de los otros 2 ejes, es decir, se va generando el trabajo por capas, como por ejemplo para el desbaste que realizaremos a continuación.</p>
+<p><img src="/img/cnc252/CNC25.jpg" alt="Proyecciones silla"></p>
 <h2 id="pasos-de-estructura">Pasos de estructura</h2>
 <hr>
 <h1 id="heading-1"></h1>
-<h3 id="primero">Primero</h3>
-<h2 id="compilado-fotos-reales">Compilado fotos reales</h2>
+<h3 id="primero-preparación">Primero: Preparación</h3>
+<p>En esta ocasión, no solo nos interesará desbastar en 2 ejes, si no que deberemos hacerlo en 2.5 dada la forma no plana de nuestra nueva pieza.</p>
+<p><img src="/img/cnc252/1.png" alt="Proyecciones silla"></p>
+<p>Para esto posicionaremos la pieza en el origen, dejando espacio suficiente para el bloque de madera que agregaremos (del cual se generará el respaldo).</p>
+<p>Seleccionamos &ldquo;Crear boceto&rdquo; para agregar un rectángulo que representara nuestro bloque de madera.</p>
+<p><img src="/img/cnc252/2.png" alt="Proyecciones silla"></p>
+<p>Luego estruiremos este rectángulo cubriendo toda la pieza del respaldo para finalizar el bloque.</p>
+<p><img src="/img/cnc252/3.png" alt="Proyecciones silla"></p>
+<p>Cambiaremos el modo de diseño a fabricación y en configuración seleccionaremos nuestra máquina.</p>
+<p><img src="/img/cnc252/4.png" alt="Proyecciones silla"></p>
+<p>En la misma ventana se seleccionara la orientación de nuestro nuevo punto de origen para el proceso de CNC.</p>
+<p><img src="/img/cnc252/5.png" alt="Proyecciones silla"></p>
+<p>En este caso decidimos hacer este cambio en base a una cara Z y un eje X, en modelo debemos seleccionar nuestro respaldo o la pieza que deseemos generar.</p>
+<p><img src="/img/cnc252/6.png" alt="Proyecciones silla"></p>
+<p>Finalmente en la sección de material escogeremos el modo &ldquo;Desde sólido&rdquo; y seleccionaremos nuestro bloque de madera.</p>
+<p><img src="/img/cnc252/7.png" alt="Proyecciones silla"></p>
+<h3 id="segundo-desbaste-cnc">Segundo: Desbaste CNC</h3>
+<p>Para cuidar las fresas y no desgastarlas inecesariamente, agregaremos un espacio de trabajo más acotado o exacto si se quiere, de esta manera evitaremos que la fresadora desbaste todo el bloque, incluso las partes que no involucran la pieza a generar.</p>
+<p>Para esto volveremos al modo diseño, y en &ldquo;crear&rdquo; en la opción de &ldquo;proyectar/incluir&rdquo; seleccionaremos &ldquo;Proyectar&rdquo;.</p>
+<p><img src="/img/cnc252/8.png" alt="Proyecciones silla"></p>
+<p>La geometría a proyectar será nuestra pieza, en este caso el respaldo, esto proyectara la figura de este en el bloque de madera, creando un espacio de trabajo más exacto para desbastar.</p>
+<p><img src="/img/cnc252/9.png" alt="Proyecciones silla"></p>
+<p>Ahora deberemos seleccionar el tipo de proceso que queremos ralizar, para este caso será el de &ldquo;Limpieza adaptativa&rdquo;.</p>
+<p><img src="/img/cnc252/10.png" alt="Proyecciones silla"></p>
+<p>Deberemos seleccionar la fresa a usar, en este caso ser una flatmill de 6mm.</p>
+<p><img src="/img/cnc252/11.png" alt="Proyecciones silla"></p>
+<p>En la sección geometría deberemos configurar varios elementos, en selección de contorno, usaremos el cuadrado proyectado anteriormente, en contornos del material lo mismo, en origen &ldquo;desde el material de configuración&rdquo; y en superficies del modelo seleccionaremos nuestra pieza (el respaldo).</p>
+<p><img src="/img/cnc252/12.png" alt="Proyecciones silla"></p>
+<p>Iremos a la sección de pasadas donde cambiaremos la carga óptima ed 6mm a 3mm (el 50% de la capacidad total de la fresa que es de 6mm diámetro).</p>
+<p><img src="/img/cnc252/13.png" alt="Proyecciones silla"></p>
+<p>Finalmente, simplemente aceptamos y podemos realizar una simulación haciendo click derecho en nuestra layer del proceso adaptativo, es importante realizarla ya que cualquier inconveniente que pudiera suceder en la realidad podrá ser notado en la simulación, a continuación encontraremos un ejemplo de esto último y como solucionarlo.</p>
+<p><img src="/img/cnc252/14.png" alt="Proyecciones silla"></p>
+<h3 id="tercero-afinando-detalles">Tercero: Afinando detalles</h3>
+<p>A pesar de ya tener el desbaste general hecho, es bueno que la fresadora pase un par de veces afinando detalles, esto se logra con repasos que desbasten en una secuencia defierente, para ello usaremos desbastes paralelos.</p>
+<p>Seleccionamos la herramienta de paralelo, indicada con el circulo rojo, en las configuraciones de la ventana, en contorno de mecanización debemos escoger &ldquo;Selección&rdquo;, para seleccionar nuestro rectángulo proyectado y luego en Modelo deberemos seleccionar nuestro respaldo como lo hicimos anteriormente.</p>
+<p><img src="/img/cnc252/15.png" alt="Proyecciones silla"></p>
+<p>Cabe resaltar que ha surgido un problema, el programa te muestra ciertas áreas en rojo, las cuales representan puntos donde la fresa no es lo suficientemente larga, por lo cual el cabezal choca contra nuestro bloque de madera, esto lo cerregiremos más adelante.</p>
+<p><img src="/img/cnc252/16.png" alt="Proyecciones silla"></p>
+<p>Para dejar aún mejor detallada nuestra pieza, podemos realizar la misma acción pero de manera perpendicular a primera, para esto duplicaremos el paralelo anterior con click derecho en este y &ldquo;duplicar&rdquo;.</p>
+<p><img src="/img/cnc252/17.png" alt="Proyecciones silla"></p>
+<p>En nuestra nueva layer de desbaste paralelo le daremos click derecho y editar, en la ventana debemos modificar los grados de 0 a 90.</p>
+<p><img src="/img/cnc252/18.png" alt="Proyecciones silla"></p>
+<h3 id="observación">Observación</h3>
+<p>Para solucionar el problema detectado con anterioridad, debemos cambiar la longitud de la fresa, para que el cabezal de la fresadora no choque con el bloque de madera, lo cual generaría obvios problemas tanto para la máquina como para el material de trabajo.</p>
+<p>Para esto nso dirigiremos a la bilbioteca de herramientas, donde copiaremos la fresa actual para tener el respaldo de la original antes de modificarla, luego daremos click derecho y editar.</p>
+<p><img src="/img/cnc252/19.png" alt="Proyecciones silla"></p>
+<p>En primer lugar le cambiamos el nombre a lo que nos sea reconocible, para luego, en la sección de cortadoras, donde se encuentra especificado su largo, lo cambiaremos, para asegurar que nuestro ajuste surta efecto, cambiaremos el largo a casi el doble, 40mm.</p>
+<p><img src="/img/cnc252/20.png" alt="Proyecciones silla"></p>
+<p>Terminado esto, lo siquiente es ir a nuestras configuraciones de desbaste y editarlas para seleccionar nuestra nueva fresa, probablemente debamos volver a cambiar el margen de tolerancia de 6mm a 3mm como lo hicimos anteriormente, debemos hacer esto con cada una de las secciones de desbaste, es decir, también en lo paralelos.</p>
+<p><img src="/img/cnc252/21.png" alt="Proyecciones silla">
+<img src="/img/cnc252/22.png" alt="Proyecciones silla"></p>
+<h2 id="iframe">Iframe</h2>
 <hr>
 <h1 id="heading-2"></h1>
-<p>Compilado de como quedaría en respaldo en una silla real</p>
+<div>
+    <iframe 
+    src='https://a360.co/3DcRjtR'
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+<h2 id="compilado-fotos-reales">Compilado fotos reales</h2>
+<hr>
 <h1 id="heading-3"></h1>
+<p>Compilado de como quedaría el respaldo en una silla real</p>
+<h1 id="heading-4"></h1>
 <p>
 <link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
 
