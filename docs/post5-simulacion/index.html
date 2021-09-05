@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>5. Simulación - Dario Salas - Taller Fabricación 2021</title>
+  <title>5. Simulación y Diseño generativo - Dario Salas - Taller Fabricación 2021</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://dv-salas.github.io/favicon.png">
@@ -119,7 +119,7 @@
     </li>
     
     <li class="active ">
-      <a href="https://dv-salas.github.io/docs/post5-simulacion/">5. Simulación</a>
+      <a href="https://dv-salas.github.io/docs/post5-simulacion/">5. Simulación y Diseño generativo</a>
     </li>
     
     <li class="">
@@ -141,16 +141,83 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">5. Simulación</h1>
+<h1 class="title">5. Simulación y Diseño generativo</h1>
 <div class="content ">
-  <h2 id="tipos-de-fresas">Tipos de fresas</h2>
+  <h2 id="simulación-fuerzas-en-estático">Simulación fuerzas en estático</h2>
 <hr>
 <h1 id="heading"></h1>
-<h2 id="pasos-de-estructura">Pasos de estructura</h2>
+<p>En primer lugar debemos analizar el cuerpo totale que se encuentra el objeto de nuestra simulación en este caso, el ala de un avion.</p>
+<p><img src="/img/Simulacion/1.png" alt="Proyecciones silla"></p>
+<p>Teniendo ya la pieza a probar en cuestión, procedemos a cambiar el modo de diseño a simulación.</p>
+<p><img src="/img/Simulacion/2.png" alt="Proyecciones silla"></p>
+<p>En este caso probaremos una tensiín estática.</p>
+<p><img src="/img/Simulacion/3.png" alt="Proyecciones silla"></p>
+<p>Debemos especificar el material de nuestra pieza, esto ayudará al simulador a conocer la resistencia de esta.</p>
+<p><img src="/img/Simulacion/4.png" alt="Proyecciones silla"></p>
+<p>A continuación hay que especificar las restricciones estructurales, es decir, que partes iran fijas de la estructura.</p>
+<p><img src="/img/Simulacion/5.png" alt="Proyecciones silla"></p>
+<p><img src="/img/Simulacion/6.png" alt="Proyecciones silla"></p>
+<p><img src="/img/Simulacion/7.png" alt="Proyecciones silla"></p>
+<p>Seguidamente toca escoger las cargas estructurales, dicho en simple, donde y en que dirección estarán las fuerzas que nuestra pieza debe soportar, además debemos especificar la magnitud de estas.</p>
+<p><img src="/img/Simulacion/8.png" alt="Proyecciones silla"></p>
+<p><img src="/img/Simulacion/9.png" alt="Proyecciones silla"></p>
+<p>Finalmente seleccionamos &ldquo;Resolver&rdquo; para que comience la simulación.</p>
+<p><img src="/img/Simulacion/11.png" alt="Proyecciones silla"></p>
+<p>Los colores indican que tanta fuerza tuvieron que soportar y además de reflejar de manera explícita las deformaciones generadas por esto.</p>
+<p><img src="/img/Simulacion/12.png" alt="Proyecciones silla"></p>
+<p><img src="/img/Simulacion/13.png" alt="Proyecciones silla"></p>
+<h2 id="iframe-de-pieza">Iframe de pieza</h2>
 <hr>
 <h1 id="heading-1"></h1>
-<h2 id="compilado-fotos-reales">Compilado fotos reales</h2>
+<div>
+    <iframe 
+    src='https://a360.co/3BLiw5l'
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+<h2 id="diseño-generativo">Diseño generativo</h2>
 <hr>
+<h1 id="heading-2"></h1>
+<p>Nos dirigimos al panel de datos.</p>
+<p><img src="/img/Generativo/1.png" alt="Proyecciones silla"></p>
+<p>Y bajamos hasta los samples de diseño generativo.</p>
+<p><img src="/img/Generativo/2.png" alt="Proyecciones silla"></p>
+<p>Una vez con el diseño cargado seleccionamos el modo de diseño generativo.</p>
+<p><img src="/img/Generativo/3.png" alt="Proyecciones silla"></p>
+<p>Dado que descargamos el modelo, aparece con un candado en su pestaña, para poder editarlo debemos guardarlo para que quede en nuestra propia nube.</p>
+<p><img src="/img/Generativo/4.png" alt="Proyecciones silla"></p>
+<p>Abrimos un nuevo estudio generativo.</p>
+<p><img src="/img/Generativo/5.png" alt="Proyecciones silla"></p>
+<p>Debemos seleccionar que piezas de la geomatría se conservarán en nuestro nuevo objeto.</p>
+<p><img src="/img/Generativo/6.png" alt="Proyecciones silla"></p>
+<p><img src="/img/Generativo/7.png" alt="Proyecciones silla"></p>
+<p>Luego escogeremos las geometrías de obstaculo, que dicho en simple son los espacios que la nueva forma deberá evitar ya que los necesitaremos despejados.</p>
+<p><img src="/img/Generativo/8.png" alt="Proyecciones silla"></p>
+<p><img src="/img/Generativo/9.png" alt="Proyecciones silla"></p>
+<p>Además deberemos agregar restricciones estructurales, es decir lugares donde no se debe generar diseño, ya que por ejemplo es por donde se origina nuestra pieza desde el piso, muro, etc.</p>
+<p><img src="/img/Generativo/10.png" alt="Proyecciones silla"></p>
+<p>Las cargas estructurales, son los lugares donde se ejercerá la fuerza que debe soportar, a estas se les debe especificar una dirección y magnitud, al igual que en el ejercicio de la simulación anterior.</p>
+<p><img src="/img/Generativo/11.png" alt="Proyecciones silla"></p>
+<p><img src="/img/Generativo/12.png" alt="Proyecciones silla"></p>
+<p><img src="/img/Generativo/13.png" alt="Proyecciones silla"></p>
+<p>Ya en las últimas etapas, debemos darle un objetivo, como por ejemplo minimizar la masa o material a usar.
+El coeficiente de seguridad indica en terminos de múltiplos por sobre la fuerza que se esta ejerciendo cuanto podrá soportar la pieza, es decir quedar pasado de lo que debe soportar por seguridad.</p>
+<p><img src="/img/Generativo/14.png" alt="Proyecciones silla"></p>
+<p><img src="/img/Generativo/15.png" alt="Proyecciones silla"></p>
+<p>Luego en fabricación en este caso seleccionaremos solo el método de adición, los parametros puestos indican los minimos para imprimir la pieza sin soportortes.</p>
+<p><img src="/img/Generativo/16.png" alt="Proyecciones silla"></p>
+<p>Se puede rápidamente producir una previsualización para comprender hacia donde irá el modelo nuevo de manera bien tosca, pero que se da a entender.</p>
+<p><img src="/img/Generativo/17.png" alt="Proyecciones silla"></p>
+<p><img src="/img/Generativo/18.png" alt="Proyecciones silla"></p>
+<p>Por último pasamos a seleccionar generar, donde comenzará el proceso en la nube, dado que este se hace en los computadores de la empresa y no en los nuestros, esto puede tardar varias horas y al avanzar irá dando los resultados de los distintos materiales seleccionados.</p>
+<p><img src="/img/Generativo/19.png" alt="Proyecciones silla"></p>
+<p>Los avances se pueden ir revisando en Explorar.</p>
+<p><img src="/img/Generativo/20.png" alt="Proyecciones silla"></p>
 
 </div>
 </div>
